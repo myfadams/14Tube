@@ -11,6 +11,7 @@ import VidScreen from './screens/VidScreen/VidScreen';
 import HomeScreen from './screens/HomeScreen';
 import SubscriptionScreen from './screens/SubscriptionScreen/SubscriptionScreen';
 import YouScreen from './screens/YouScreen/YouScreen';
+import VideoListItem from './components/VideoListItem';
 const Stack = createStackNavigator();
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Stack.Screen name="You" component={YouScreen} />
       </Stack.Navigator>
     </NavigationContainer>
+    // <HomeScreen />
 
   );
 }

@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     headerIcons: {
       flexDirection: 'row',
       alignItems: 'center',
+      marginRight: 10
     },
     headerIcon: {
       width: 40,
@@ -44,6 +45,11 @@ const styles = StyleSheet.create({
       height: 30,
       borderRadius: 15,
     },
+    vectors: {
+      width: 30,
+      height: 30,
+      marginLeft: 15,
+    },
     categoryContainer: {
       flexDirection: 'row',
       padding: 10,
@@ -54,7 +60,7 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       marginRight: 10,
       borderWidth: 0.5,
-      borderColor: 'white'
+      backgroundColor: '#1F1F1F'
     },
     categoryText: {
       fontSize: 14,
@@ -117,8 +123,7 @@ const styles = StyleSheet.create({
       justifyContent: 'space-around',
       alignItems: 'center',
       padding: 10,
-      backgroundColor: 'black',
-      borderTopColor: '#eee',
+      backgroundColor: '#272727',
     },
     bottomNavItem: {
       alignItems: 'center',
@@ -126,7 +131,7 @@ const styles = StyleSheet.create({
     bottomNavIcon: {
       width: 24,
       height: 24,
-      marginBottom: 4,
+      marginBottom: 5,
     },
     bottomNavItemText: {
       fontSize: 12,

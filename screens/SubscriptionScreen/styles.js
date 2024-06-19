@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       marginRight: 10,
       borderWidth: 0.5,
-      borderColor: 'white'
+      backgroundColor: '#1F1F1F'
     },
     categoryText: {
       fontSize: 14,

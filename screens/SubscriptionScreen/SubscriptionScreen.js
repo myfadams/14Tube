@@ -6,31 +6,14 @@ import videos from '../../assets/data/videos.json'
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import VideoListItem from '../../components/VideoListItem'
 import YouTubeLogo from '../../assets/images/YouMate.png';
+import BottomNavigationBar from '../../navigation/BottomNavigationBar'
+import TopNavigationBar from '../../navigation/TopNavigationBar'
 
 
 const SubscriptionScreen = ({navigation}) => {
   return (
 <View style={styles.container}>
-<View style={styles.header}>
-        <View style={styles.brand}>
-        <Image
-      source={YouTubeLogo}
-      style={styles.logo}
-    />
-        <Text style={styles.headerText}>StreaMate</Text>
-        </View>
-        <View style={styles.headerIcons}>
-          <TouchableOpacity>
-            <MaterialIcons name="cast" size={25} color='white' style={styles.headerIcon} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Ionicons name="notifications-outline" size={25} color='white' style={styles.headerIcon} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Ionicons name="search-outline" size={25} color='white' style={styles.headerIcon} />
-          </TouchableOpacity>
-        </View>
-      </View>
+  <TopNavigationBar />
     <ScrollView>
       <View>
         <ScrollView horizontal style={styles.channelList}>
@@ -126,27 +109,7 @@ const SubscriptionScreen = ({navigation}) => {
       />
     </ScrollView>
 
-      <View style={styles.bottomNav}>
-        <TouchableOpacity style={styles.bottomNavItem} onPress={() => navigation.navigate('Home')}>
-        <Ionicons name="home-outline" size={25} color={'white'} style={styles.headerIcon} />
-          <Text style={styles.bottomNavItemText}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomNavItem}>
-        <Ionicons name="play-outline" size={25} color={'white'} style={styles.headerIcon} />
-          <Text style={styles.bottomNavItemText}>Shorts</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomNavItem}>
-        <Ionicons name="add-circle-outline" size={50} color={'white'} />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomNavItem}  onPress={() => navigation.navigate('Subscription')}>
-        <Ionicons name="film" size={25} color={'white'} style={styles.headerIcon} />
-          <Text style={styles.bottomNavItemText}>Subscription</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomNavItem}  onPress={() => navigation.navigate('You')} >
-        <Ionicons name="person-circle-outline" size={25} color={'white'} style={styles.headerIcon} />
-          <Text style={styles.bottomNavItemText}>You</Text>
-        </TouchableOpacity>
-      </View>
+    <BottomNavigationBar route={'Subscription'} navigation={navigation} />
     </View>
   )
 }

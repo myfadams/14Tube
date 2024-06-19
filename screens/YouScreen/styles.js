@@ -4,36 +4,6 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: 'black',
     },
-    header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingTop: 16,
-        paddingBottom: 8,
-        marginBottom: 10,
-        marginTop: 20,
-      },
-      brand: {
-        flexDirection: 'row'
-      },
-      logo: {
-        width: 50,
-        height: 30,
-      },
-      headerText: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: 'white'
-      },
-      headerIcons: {
-        flexDirection: 'row',
-        alignItems: 'center',
-      },
-      headerIcon: {
-        width: 40,
-        height: 30,
-        marginLeft: 15,
-      },
     profileImage: {
       width: 30,
       height: 30,
@@ -73,21 +43,24 @@ const styles = StyleSheet.create({
     buttonRow: {
       flexDirection: 'row',
       justifyContent: 'space-around',
-      padding: 10,
+      padding: 5,
     },
     button: {
-      borderColor: 'white',
-      borderWidth: 1,
-      borderRadius: 20,
+      backgroundColor: '#1F1F1F',
+      borderRadius: 40,
       paddingVertical: 5,
-      paddingHorizontal: 10,
-      marginRight: 20,
+      paddingHorizontal: 15,
+      marginRight: 10,
       flexDirection: 'row',
-      alignItems: 'center'
+      alignContent: 'center'
     },
     btnText: {
         marginLeft: 5,
         color: 'white'
+    },
+    icon: {
+      width: 20,
+      height: 20,
     },
     section: {
       padding: 10,
@@ -98,8 +71,14 @@ const styles = StyleSheet.create({
       color: 'white'
     },
     viewAll: {
-      color: 'grey',
+      color: 'white',
       alignSelf: 'flex-end',
+      borderWidth: 1,
+      borderColor: 'grey',
+      borderRadius: 30,
+      paddingVertical: 2,
+      paddingHorizontal: 10,
+      marginBottom: 5
     },
     videoThumbnail: {
       width: 150,
@@ -119,39 +98,8 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     listItemText: {
-        color: 'white'
+        color: 'white',
+        marginLeft: 5
     },
-    bottomNavigation: {
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      padding: 10,
-      borderTopColor: 'gray',
-      borderTopWidth: 0.5,
-    },
-    profileImageSmall: {
-      width: 25,
-      height: 25,
-      borderRadius: 12.5,
-    },
-    bottomNav: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        padding: 10,
-        backgroundColor: 'black',
-        borderTopColor: '#eee',
-      },
-      bottomNavItem: {
-        alignItems: 'center',
-      },
-      bottomNavIcon: {
-        width: 24,
-        height: 24,
-        marginBottom: 4,
-      },
-      bottomNavItemText: {
-        fontSize: 12,
-        color: 'white'
-      },
   });
 export default styles

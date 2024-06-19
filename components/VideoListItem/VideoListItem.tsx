@@ -1,9 +1,8 @@
 // screens/HomeScreen.js
 import React from 'react';
-import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, Image, } from 'react-native';
 // import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
-import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 
 
 

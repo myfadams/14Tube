@@ -37,6 +37,10 @@ const styles = StyleSheet.create({
       fontSize: 14,
       marginVertical: 4,
     },
+    vectors: {
+      width: 20,
+      height: 20,
+    },
     actions: {
       flexDirection: 'row',
       justifyContent: 'space-around',
@@ -44,21 +48,33 @@ const styles = StyleSheet.create({
     },
     actionButton: {
       alignItems: 'center',
+      flexDirection: 'row',
+      backgroundColor: '#1f1f1f',
+      paddingHorizontal: 10,
+      paddingVertical: 5,
+      borderRadius: 30,
+      marginRight: 10,
     },
     actionText: {
       color: 'white',
       fontSize: 12,
+      marginLeft: 5,
     },
     avatar: {
-        width: 50,
-        height: 50,
-        borderRadius: 25
+        width: 40,
+        height: 40,
+        borderRadius: 20
     },
     userContainer: {
-        padding: 5,
         flexDirection: 'row',
+        justifyContent: 'center',
         alignItems: 'center',
         borderColor: 'darkgrey',
+    },
+    userInfo: {
+      flex: 1, 
+      padding: 10,
+      flexDirection: 'row'
     },
     channelName: {
         fontSize: 18,
@@ -66,13 +82,30 @@ const styles = StyleSheet.create({
     },
     channelSubscribers: {
         fontSize: 15,
-        color: 'white'
+        color: 'grey',
+        marginLeft: 10,
+        top: 2,
     },
     subscribeBtn: {
-        color: 'red',
-        padding: 10,
-        fontSize: 15,
-        borderRadius: 15
+        color: 'black',
+        backgroundColor: 'white',
+        paddingVertical: 5,
+        paddingHorizontal: 10,
+        fontSize: 13,
+        borderRadius: 20
+    },
+    comments : {
+      paddingVertical: 5,
+      paddingHorizontal: 20,
+      backgroundColor: '#1f1f1f',
+      marginHorizontal: 10,
+      borderRadius: 15,
+      marginBottom: 15,
+    },
+    commentContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      borderColor: 'grey',
     },
     recommendations: {
       padding: 16,
@@ -141,9 +174,9 @@ const styles = StyleSheet.create({
       paddingVertical: 10,
     },
     commentAvatar: {
-      width: 40,
-      height: 40,
-      borderRadius: 20,
+      width: 30,
+      height: 30,
+      borderRadius: 15,
       marginRight: 10,
     },
     commentTextContainer: {

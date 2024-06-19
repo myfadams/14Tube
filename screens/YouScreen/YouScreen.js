@@ -5,27 +5,23 @@ import styles from './styles';
 import YouTubeLogo from '../../assets/images/YouMate.png';
 import video from '../../assets/data/video.json'
 import videos from '../../assets/data/videos.json'
+import TopNavigationBar from '../../navigation/TopNavigationBar';
+import UserIcon from '../../assets/icons/User.png';
+import IcognitoIcon from '../../assets/icons/Anonymity.png';
+import MovieIcon from '../../assets/icons/Movie.png';
+import YoutubeIcon from '../../assets/icons/Youtube.png';
+import AnalysticsIcon from '../../assets/icons/Analystics.png';
+import UnknownIcon from '../../assets/icons/Unknown.png';
+import PlayIcon from '../../assets/icons/Play.png';
+import DownloadIcon from '../../assets/icons/Download.png';
+import HistoryIcon from '../../assets/icons/History.png';
+import BottomNavigationBar from '../../navigation/BottomNavigationBar';
+
 
 const YouScreen = ({navigation}) => {
   return (
 <View style={styles.container}>
-    <View style={styles.header}>
-        <View style={styles.brand}>
-          <Image source={YouTubeLogo} style={styles.logo} />
-          <Text style={styles.headerText}>StreaMate</Text>
-        </View>
-        <View style={styles.headerIcons}>
-          <TouchableOpacity>
-            <MaterialIcons name="cast" size={25} color="white" style={styles.headerIcon} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Ionicons name="notifications-outline" size={25} color="white" style={styles.headerIcon} />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Ionicons name="search-outline" size={25} color="white" style={styles.headerIcon} />
-          </TouchableOpacity>
-        </View>
-    </View>
+    <TopNavigationBar />
 
     <ScrollView>
     <View style={styles.profileSection}>
@@ -44,15 +40,15 @@ const YouScreen = ({navigation}) => {
       <View style={styles.buttonRow}>
         <ScrollView horizontal>
         <TouchableOpacity style={styles.button}>
-        <Ionicons name="person-circle-outline" size={25} color="white" />
+        <Image source={UserIcon} style={styles.icon} />
           <Text style={styles.btnText}>Switch account</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-        <Ionicons name="logo-google" size={20} color="white" />
+        <Ionicons name="logo-google" size={18} color="white" />
           <Text style={styles.btnText}>Google Account</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-        <Ionicons name="" size={20} color="white" />
+        <Image source={IcognitoIcon} style={styles.icon} />
           <Text style={styles.btnText}>Turn on Incognito</Text>
         </TouchableOpacity>
         </ScrollView>
@@ -108,50 +104,34 @@ const YouScreen = ({navigation}) => {
       
     <View style={styles.section}>
         <TouchableOpacity style={styles.listItem}>
-            <Ionicons name="film-outline" size={25} color="white" style={{marginRight: 5,}} />
+        <Image source={PlayIcon} style={styles.icon} />
           <Text style={styles.listItemText}>Your videos</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.listItem}>
-        <Ionicons name="download-outline" size={25} color="white" style={{marginRight: 5,}} />
+        <Image source={DownloadIcon} style={styles.icon} />
           <Text style={styles.listItemText}>Downloads</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.listItem}>
-        <Ionicons name="time-outline" size={25} color="white" style={{marginRight: 5,}} />
+        <Image source={HistoryIcon} style={styles.icon} />
           <Text style={styles.listItemText}>Watch later</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.listItem}>
-        <Ionicons name="download-outline" size={25} color="white" style={{marginRight: 5,}} />
+        <Image source={MovieIcon} style={styles.icon} />
           <Text style={styles.listItemText}>Your movies</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.listItem}>
-        <Ionicons name="cash" size={25} color="white" style={{marginRight: 5,}} />
+        <Image source={YoutubeIcon} style={styles.icon} />
           <Text style={styles.listItemText}>Get premium</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.listItem}>
+        <Image source={UnknownIcon} style={styles.icon} />
+          <Text style={styles.listItemText}>Help and feedback</Text>
         </TouchableOpacity>
 
     </View>
     </ScrollView>
 
-    <View style={styles.bottomNav}>
-        <TouchableOpacity style={styles.bottomNavItem} onPress={() => navigation.navigate('Home')} >
-          <Ionicons name="home" size={25} color="white" style={styles.headerIcon} />
-          <Text style={styles.bottomNavItemText}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomNavItem}>
-          <Ionicons name="play-outline" size={25} color="white" style={styles.headerIcon} />
-          <Text style={styles.bottomNavItemText}>Shorts</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomNavItem}>
-          <Ionicons name="add-circle-outline" size={50} color="white" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomNavItem} onPress={() => navigation.navigate('Subscription')} >
-          <Ionicons name="film-outline" size={25} color="white" style={styles.headerIcon} />
-          <Text style={styles.bottomNavItemText}>Subscription</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.bottomNavItem} onPress={() => navigation.navigate('You')}>
-          <Ionicons name="person-circle-outline" size={25} color="white" style={styles.headerIcon} />
-          <Text style={styles.bottomNavItemText}>You</Text>
-        </TouchableOpacity>
-    </View>
+    <BottomNavigationBar route={'You'} navigation={navigation} />
 </View>
   )
 }
